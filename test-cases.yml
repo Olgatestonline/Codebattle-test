@@ -1,6 +1,6 @@
 ---
 - summary: |
-    Проверка регистрации на сайте по адресу электронной почты
+    Успешная регистрация на сайте по адресу электронной почты
   requirement: |
     Пользователь должен иметь возможность зарегистрироваться на сайте
   prerequisites: |
@@ -8,16 +8,17 @@
   test-data: |
     no data
   steps:
+    - нажимаем на кнопку 'Sign up'
     - вводим Nickname
     - вводим email
     - вводим пароль
     - подтверждаем пароль
-    - нажимаем на кнопку "Submit"
+    - нажимаем на кнопку 'Submit'
   expected-result: |
-    Пользователь должен попасть на страницу https://codebattle.hexlet.io/#lobby под своим логином
+    Пользователь успешно зарегистрировался на сайте по адресу электронной почты
 
 - summary: |
-    Проверка регистрации на сайте по профилю на GitHub
+    Успешная регистрации на сайте по профилю на GitHub
   requirement: |
     Пользователь должен иметь возможность зарегистрироваться на сайте
   prerequisites: |
@@ -25,13 +26,13 @@
   test-data: |
     профиль пользователя на GitHub
   steps:
-    - нажимаем на кнопку "Sing in with GitHub"
-    - в соответствующие поля вводим username и пароль профиля на GitHub 
+    - нажимаем на кнопку 'Sign up'
+    - нажимаем на кнопку 'Sign in with GitHub'
   expected-result: |
-    Пользователь должен попасть на страницу https://codebattle.hexlet.io/#lobby под своим логином
+    Пользователь успешно зарегистрировался на сайте ао профилю на GitHub
 
 - summary: |
-    Проверка регистрации на сайте по профилю на Discord
+    Успешная регистрации на сайте по профилю на Discord
   requirement: |
     Пользователь должен иметь возможность зарегистрироваться на сайте
   prerequisites: |
@@ -39,13 +40,13 @@
   test-data: |
     профиль пользователя на Discord
   steps:
-    - нажимаем на кнопку "Sing in with Discord"
-    - в соответствующие поля вводим username и пароль профиля на Discord 
+    - нажимаем на кнопку 'Sign up'
+    - нажимаем на кнопку 'Sign in with Discord'
   expected-result: |
-    Пользователь должен попасть на страницу https://codebattle.hexlet.io/#lobby под своим логином
+    Пользователь успешно зарегистрировался на сайте по профилю на Discord
 
 - summary: |
-    Проверка входа пользователя по существующему адресу электронной почты (логину) и паролю
+    Успешная авторизация пользователя по существующему адресу электронной почты (логину) и паролю
   requirement: |
     Пользователь должен иметь возможность авторизоваться на сайте под верным логином и паролем
   prerequisites: |
@@ -53,14 +54,15 @@
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
+    - нажимаем на кнопку 'Sign in'
     - Вводим email
     - Вводим пароль
-    - Нажимаем кнопку «Sing in»
+    - Нажимаем кнопку 'Sign in'
   expected-result: |
     Пользователь должен попасть на страницу https://codebattle.hexlet.io/#lobby под своим логином
 
 - summary: |
-    Проверка входа пользователя по профилю на GitHub
+    Успешная авторизация пользователя по профилю на GitHub
   requirement: |
     Пользователь должен иметь возможность авторизоваться на сайте под верным логином и паролем
   prerequisites: |
@@ -68,12 +70,13 @@
   test-data: |
     профиль пользователя на GitHub
   steps:
-    - нажимаем на кнопку "Sing in with GitHub"
+    - нажимаем на кнопку 'Sign in'
+    - нажимаем на кнопку 'Sign in with GitHub'
   expected-result: |
-    Пользователь должен попасть на страницу https://codebattle.hexlet.io/#lobby под своим логином
-
-summary: |
-    Проверка входа пользователя по профилю на Discord
+    Пользователь успешно авторизовался на сайте по профилю на GitHub
+    
+- summary: |
+    Успешная авторизация пользователя по профилю на Discord
   requirement: |
     Пользователь должен иметь возможность авторизоваться на сайте под валидным логином и паролем
   prerequisites: |
@@ -81,9 +84,10 @@ summary: |
   test-data: |
     профиль пользователя на Discord
   steps:
-    - нажимаем на кнопку "Sing in with Discord"
+    - нажимаем на кнопку 'Sign in'
+    - нажимаем на кнопку 'Sign in with Discord'
   expected-result: |
-    Пользователь должен попасть на страницу https://codebattle.hexlet.io/#lobby под своим логином
+    Пользователь успешно авторизовался на сайте по профилю на Discord
 
 - summary: |
     Проверка входа пользователя с несуществующими адресу электронной почты (логином) и паролем
@@ -94,9 +98,10 @@ summary: |
   test-data: |
     email - testiss4@yandex.ru, пароль - 1234567t4
   steps:
+    - нажимаем на кнопку 'Sign in'
     - Вводим email
     - Вводим пароль
-    - Нажимаем кнопку «Sing in»
+    - Нажимаем кнопку 'Sign in'
   expected-result: |
     Пользователь должен получить сообщение об ошибке
 
@@ -109,10 +114,11 @@ summary: |
   test-data: |
     email = testiss1@yandex.ru неверный пароль = 1
   steps:
+    - нажимаем на кнопку 'Sign in'
     - Вводим email из test-data
     - Вводим пароль из test-data
-    - Нажимаем кнопку «Войти» (получаем сообщение'invalid_password')
-    - Нажимаем на ссылку "Forgot you password?"
+    - Нажимаем кнопку 'Войти' (получаем сообщение'invalid_password')
+    - Нажимаем на ссылку 'Forgot you password?'
     - проверяем электронную почту
   expected-result: |
     Пользователь должен получить на электронную почту инструкцию о восстановлении пароля
@@ -125,18 +131,18 @@ summary: |
     осуществлён вход на сайт https://codebattle.hexlet.io/ под зарегистрированным пользователем
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
-    звук "Dendy"
-    звук "CS"
-    звук "Standart"
-    звук "Silent"
+    звук 'Dendy'
+    звук 'CS'
+    звук 'Standart'
+    звук 'Silent'
   steps:
     - нажать на никнейм учётной записи
-    - перейти в раздел "Settings"
+    - перейти в раздел 'Settings'
     - выбрать настройку звука из тестовых данных
-    - нажать кнопку "Save"
+    - нажать кнопку 'Save'
     - вернуться на страницу https://codebattle.hexlet.io/#lobby
     - нажать на никнейм учётной записи
-    - перейти в раздел "Settings"
+    - перейти в раздел 'Settings'
   expected-result: |
     Выбранные настройки сохранены (отмечен звук согласно тестовым данным)
 
@@ -150,7 +156,7 @@ summary: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
     - нажать на никнейм учётной записи
-    - перейти в раздел "Settings"
+    - перейти в раздел 'Settings'
     - изменить аватар
   expected-result: |
     Аватар пользователя изменён
@@ -165,7 +171,7 @@ summary: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
     - нажать на никнейм учётной записи
-    - перейти в раздел "Settings"
+    - перейти в раздел 'Settings'
     - изменить адрес электронной почты 
   expected-result: |
     Адрес электронной почты пользователя изменён
@@ -179,9 +185,9 @@ summary: |
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
-    - нажимаем на кнопку "Create a game"
+    - нажимаем на кнопку 'Create a game'
     - выбираем Level - 1, Game Type - With a bot, Time control - 10min, random task, Tags - rest 
-    - Нажимаем кнопку «Create battle»
+    - Нажимаем кнопку 'Create battle'
   expected-result: |
     Открывается страница активной игры
 
@@ -201,10 +207,10 @@ summary: |
       return width * length;
     };
   steps:
-    - нажимаем кнопку "Create a game"
+    - нажимаем кнопку 'Create a game'
     - выбираем Level - 1, Game Type - With a bot, Time control - 10min, выбор игры - 'rect_area'
-    - нажимаем кнопку "Create battle"
-    - вставляетм в игру код решения 
+    - нажимаем кнопку 'Create battle'
+    - вставляем в игру код решения 
   expected-result: |
     Пользователь должен получить сообщение о победе в игре, сопровождаемое звуковым оформлением
 
@@ -217,9 +223,9 @@ summary: |
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
-    - нажимаем кнопку "Create a game"
+    - нажимаем кнопку 'Create a game'
     - выбираем Level - 1, Game Type - With a bot, Time control - 8min, choice - random
-    - нажимаем кнопку "Create battle"
+    - нажимаем кнопку 'Create battle'
     - ожилаем, пока выиграет бот
   expected-result: |
     Пользователь должен получить сообщение о проигрыше в игре, сопровождаемое звуковым оформлением    
@@ -233,11 +239,11 @@ summary: |
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
-    - нажимаем кнопку "Create a game"
+    - нажимаем кнопку 'Create a game'
     - выбираем Level - 1, Game Type - With a bot, Time control - 8min, choice - random
     - нажимаем кнопку "Create battle"
-    - нажимаем на кнопку "Give up"
-    - подтвержаем действие, нажимая на кнопку "Give up"
+    - нажимаем на кнопку 'Give up'
+    - подтвержаем действие, нажимая на кнопку 'Give up'
   expected-result: |
     Пользователь должен получить сообщение о проигрыше в игре, сопровождаемое звуковым оформлением
   
@@ -250,9 +256,9 @@ summary: |
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
-    - нажимаем кнопку "Create a game"
+    - нажимаем кнопку 'Create a game'
     - выбираем Level - 1, Game Type - With a bot, Time control - 3min, choice - random
-    - нажимаем кнопку "Create battle"
+    - нажимаем кнопку 'Create battle'
     - Ожидаем, пока закончитнся время игры.
   expected-result: |
     Пользователь должен получить сообщение об истечении лимита времени, сопровождаемое звуковым оформлением
@@ -267,7 +273,7 @@ summary: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
     - переходим на вкладку lobby
-    - нажимаем на кнопку "Show" рядом с активной игрой
+    - нажимаем на кнопку 'Show' рядом с активной игрой
   expected-result: |
     Открывается страница активной игры в режиме реального времени
 
@@ -280,8 +286,8 @@ summary: |
   test-data: |
     email = testiss1@yandex.ru Пароль = 1234567t
   steps:
-    - Заходим на вкладку "History"
-    - нажимаем на кнопку "Show" рядом с завершившейся игрой 
+    - Заходим на вкладку 'History'
+    - нажимаем на кнопку 'Show' рядом с завершившейся игрой 
   expected-result: |
     Открывается страница со статистикой завершённой игры  
 
@@ -307,8 +313,8 @@ summary: |
   test-data: |
     no data
   steps:
-    - Нажимаем на кнопку "Try simple battle"
-    - На странице активной игры нажимаем на кнопку "Show guide"
+    - Нажимаем на кнопку 'Try simple battle'
+    - На странице активной игры нажимаем на кнопку 'Show guide'
   expected-result: |
     Открывается пошаговый гайд игры
 
@@ -321,7 +327,7 @@ summary: |
   test-data: |
     no data
   steps:
-    - Нажимаем на кнопку "Try simple battle"
+    - Нажимаем на кнопку 'Try simple battle'
   expected-result: |
     На странице активной игры отображается таймер, чат, редактор кода соперника в реальном времени во время игры.
 
