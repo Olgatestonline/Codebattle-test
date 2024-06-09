@@ -150,7 +150,7 @@ summary: |
   status: pass 
 
 - summary: |
-    Проверка битых ссылок на странице
+    Проверка битых ссылок на сайте
   status: fail
 
 - summary: |
